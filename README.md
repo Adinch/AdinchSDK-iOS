@@ -1,25 +1,27 @@
 Adinch
+===========
 Adinch for iOS is provided in source rather than framework form so you must build it by incorporating the Adinch sub-folder into your Xcode project.
 
 For using each network include to project same adapter from our site
 
 TouchJSON & JSONKit
+================
 Similarly incorporate the TouchJSON & JSONKit redistribution bundled with the Adinch SDK.
 
  System Frameworks
 Add the system frameworks required by the supported ad networks:
 
-	•.	AddressBook
-	•.	AudioToolbox
-	•.	AVFoundation
-	•.	CoreLocation
-	•.	libsqlite3
-	•.	libz
-	•.	MapKit
+	*.	AddressBook
+	*.	AudioToolbox
+	*.	AVFoundation
+	*.	CoreLocation
+	*.	libsqlite3
+	*.	libz
+	*.	MapKit
 The following additional frameworks are required by the iAd adapter:
-	•.	iAd
-	•.	QuartzCore
-	•.	SystemConfiguration
+	*.	iAd
+	*.	QuartzCore
+	*.	SystemConfiguration
     
 Some frameworks must be weak-linked if you wish to support older iOS releases where they were unavailable.
 
