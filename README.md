@@ -25,34 +25,32 @@ Setup
 Finally, to display the mediated ads simply implement AMDelegate’s two requirements, request an AMView and add it to the hierarchy.
 
 - (NSString *)AMApplicationKey {
- return _MY_AD_ADINCH_APPLICATION_KEY;
+    return _MY_AD_ADINCH_APPLICATION_KEY;
 }
- 
-- (UIViewController *)viewControllerForPresentingModalView {
- return UIWindow.rootViewController;
-}
- 
-- (void)viewDidLoad {
- [super viewDidLoad];
-  // ...
 
- AMView *amView = [AMView requestAMViewWithDelegate:self];
- [self.view addSubview:amView];
+- (UIViewController *)viewControllerForPresentingModalView {
+    return UIWindow.rootViewController;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // ...
+    
+    AMView *amView = [AMView requestAMViewWithDelegate:self];
+    [self.view addSubview:amView];
 }
 
 - (void)AMDidReceiveAd:(AMView *)amView {
- [UIView beginAnimations:@”AMDelegate.AMDidReceiveAd:”
-         context:nil];
- 
- [UIView setAnimationDuration:0.7];
- 
- CGSize adSize = [amView actualAdSize];
- CGRect newFrame = amView.frame;
- 
- newFrame.size = adSize;
- newFrame.origin.x = (self.view.bounds.size.width - adSize.width)/ 2;
- 
- amView.frame = newFrame;
- 
- [UIView commitAnimations];
+    [UIView beginAnimations:@”AMDelegate.AMDidReceiveAd:” context:nil];
+    
+    [UIView setAnimationDuration:0.7];
+    
+    CGSize adSize = [amView actualAdSize];
+    CGRect newFrame = amView.frame;
+    newFrame.size = adSize;
+    newFrame.origin.x = (self.view.bounds.size.width - adSize.width)/ 2;
+    
+    amView.frame = newFrame;
+    
+    [UIView commitAnimations];
 }
