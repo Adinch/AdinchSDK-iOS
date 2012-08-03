@@ -62,3 +62,33 @@ Finally, to display the mediated ads simply implement AMDelegate’s two require
         
         [UIView commitAnimations];
     }
+    
+Integration to Adwhirl
+---------------------
+To integrate Adinch to Adwhirl  you’ll need:
+
+1) In the Control Panel of Adwirl go to application settings. Push the button "Add custom event", in the appeared window fill the field. Function name – the name of the method, which will be called in your applicationи, let’s name it performAdinch.
+
+2) Throughout the program, define the following methods:
+
+    - (void)viewDidLoad {
+        [super viewDidLoad];
+        
+        // Сonfiguration
+        CGRect bannerFrame = CGRectZero;
+        bannerFrame.size = AD_SIZE_320x50;
+        _adinchBannerView = [[ADBannerView alloc] initWithFrame:bannerFrame];
+        _adinchBannerView.adsKey = MY_SOME_KEY;
+        _adinchBannerView.delegate = self;
+    }
+    
+    // The method that we have written  in the application settings  Adwirl (Function name)
+    - (void)performAdinch:(AdWhirlView *)sender
+    {
+        // Replace the current banner on  _adinchBannerView
+        [sender replaceBannerViewWith:_adinchBannerView];
+        
+        // Request the new banner
+        [_adinchBannerView requestNewBanner];
+    }
+
