@@ -63,7 +63,7 @@ Finally, to display the mediated ads simply implement AMDelegate’s two require
         [UIView commitAnimations];
     }
     
-Integration to Adwhirl
+Integrating to Adwhirl
 ---------------------
 To integrate Adinch to Adwhirl  you’ll need:
 
