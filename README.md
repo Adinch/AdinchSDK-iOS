@@ -8,6 +8,7 @@ Similarly incorporate the TouchJSON & JSONKit redistribution bundled with the Ad
 
  System Frameworks
 Add the system frameworks required by the supported ad networks:
+
 	•.`	AddressBook`
 	•.`	AudioToolbox`
 	•.`	AVFoundation`
@@ -19,6 +20,7 @@ The following additional frameworks are required by the iAd adapter:
 	•.`	iAd`
 	•.`	QuartzCore`
 	•.`	SystemConfiguration`
+    
 Some frameworks must be weak-linked if you wish to support older iOS releases where they were unavailable.
 
 Setup
