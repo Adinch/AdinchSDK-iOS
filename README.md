@@ -1,5 +1,6 @@
 Adinch
 ===========
+
 Adinch for iOS is provided in source rather than framework form so you must build it by incorporating the Adinch sub-folder into your Xcode project.
 
 For using each network include to project same adapter from our site
@@ -92,3 +93,6 @@ To integrate Adinch to Adwhirl  you’ll need:
         [_adinchBannerView requestNewBanner];
     }
 
+Mediation meets the requirements of <a href=http://www.apache.org/licenses/LICENSE-2.0.html>Apache License, Version 2.0</a>. All copyrights respected.
+
+The development is based on <a href=http://code.google.com/p/adwhirl/>the source codes</a> of <a href=https://www.adwhirl.com/>AdWhirl.</a>
