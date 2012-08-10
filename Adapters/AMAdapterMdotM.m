@@ -26,7 +26,6 @@
 #import "AMLog.h"
 #import "AMAdNetworkAdapter+Helpers.h"
 #import "AMAdNetworkRegistry.h"
-#import "AMAdapterCustom.h"
 #import "AMError.h"
 #import "CJSONDeserializer.h"
 #import "AMCustomAdView.h"
