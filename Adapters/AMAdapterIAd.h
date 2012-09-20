@@ -21,6 +21,10 @@
 #import "AMAdNetworkAdapter.h"
 #import <iAd/ADBannerView.h>
 
+#ifdef __IPHONE_6_0
+    #import <iAd/ADBannerView_Deprecated.h>
+#endif
+
 @interface AMAdapterIAd : AMAdNetworkAdapter <ADBannerViewDelegate> {
   NSString *kADBannerContentSizeIdentifierPortrait;
   NSString *kADBannerContentSizeIdentifierLandscape;

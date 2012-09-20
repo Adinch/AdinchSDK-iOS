@@ -20,7 +20,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "CJSONDeserializer.h"
+
 
 @class AMConfig;
 @protocol AMConfigDelegate<NSObject>
