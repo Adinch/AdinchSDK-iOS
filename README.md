@@ -5,9 +5,14 @@ Adinch for iOS is provided in source rather than framework form so you must buil
 
 For using each network include to project same adapter from our site
 
-TouchJSON & JSONKit
+JSON
 -----------------
-Similarly incorporate the TouchJSON & JSONKit redistribution bundled with the Adinch SDK.
+Your platform should support NSJSONSerialization or incorporate one of the following libraries: 
+
+    *.  JSONKit
+    *.  SBJSON
+    *.  YAJL
+    *.  TouchJSON
 
 System Frameworks
 ----------------- 
