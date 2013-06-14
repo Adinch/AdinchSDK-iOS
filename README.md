@@ -5,15 +5,6 @@ Adinch for iOS is provided in source rather than framework form so you must buil
 
 For using each network include to project same adapter from our site
 
-JSON
------------------
-Your platform should support NSJSONSerialization or incorporate one of the following libraries: 
-
-    *.  JSONKit
-    *.  SBJSON
-    *.  YAJL
-    *.  TouchJSON
-
 System Frameworks
 ----------------- 
 Add the system frameworks required by the supported ad networks:
@@ -35,6 +26,7 @@ The following additional frameworks are required by the iAd adapter:
 Some frameworks must be weak-linked if you wish to support older iOS releases where they were unavailable.
 
 Setup
+
 ------------------
 Finally, to display the mediated ads simply implement AMDelegate’s two requirements, request an AMView and add it to the hierarchy.
 
