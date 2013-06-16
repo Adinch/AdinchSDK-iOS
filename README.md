@@ -25,13 +25,40 @@ The following additional frameworks are required by the iAd adapter:
     
 Some frameworks must be weak-linked if you wish to support older iOS releases where they were unavailable.
 
-Setup
-
+1. Simple banner
 ------------------
-Finally, to display the mediated ads simply implement AMDelegate’s two requirements, request an AMView and add it to the hierarchy.
+    - (void)viewDidLoad {
+        [super viewDidLoad];
+        // ...
+        
+        AMBannerView *simpleBanner = [[AMBannerView alloc] initWithSizeType:AMBannerViewSizeType320x50];
+    	simpleBanner.adsKey = MY_ADINCH_KEY;
+	simpleBanner.delegate = self;
+    	[simpleBanner requestNewBanner];
+    
+    	[self.view addSubview:simpleBanner];
+    }
+
+
+2. Big banner
+------------------
+    - (void)viewDidLoad {
+        [super viewDidLoad];
+        // ...
+        
+        AMBannerView *bigBanner = [[AMBannerView alloc] initWithSizeType:AMBannerViewSizeType300x250];
+    	bigBanner.adsKey = MY_ADINCH_KEY;
+	bigBanner.delegate = self;
+    	[bigBanner requestNewBanner];
+    
+    	[self.view addSubview:bigBanner];
+    }
+
+3. Mediation. You can not use mediation with AMBannerViewSizeType300x250 size type
+-------------------
 
     - (NSString *)AMApplicationKey {
-        return _MY_AD_ADINCH_APPLICATION_KEY;
+        return MY_ADINCH_KEY;
     }
     
     - (UIViewController *)viewControllerForPresentingModalView {
@@ -61,7 +88,7 @@ Finally, to display the mediated ads simply implement AMDelegate’s two require
         [UIView commitAnimations];
     }
     
-Integrating to Adwhirl
+4. Integrating to Adwhirl
 ---------------------
 To integrate Adinch to Adwhirl  you’ll need:
 
