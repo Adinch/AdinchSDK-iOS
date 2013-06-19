@@ -22,6 +22,9 @@ typedef enum {
 - (id)initWithSizeType:(AMBannerViewSizeType)type;
 
 - (void)requestNewBanner;
+- (BOOL)canRequestBanner;
+
+- (BOOL)isLoaded;
 
 + (NSString *)sdkVersion;
 - (void)setLocationWithLatitude:(CGFloat)latitude longitude:(CGFloat)longitude;
