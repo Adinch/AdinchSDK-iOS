@@ -1,9 +1,9 @@
 Adinch
 ===========
 
-Adinch for iOS is provided as static library and header files.
+Adinch for iOS is provided as a static library and header files.
 
-Here is how to use Adinch library in you project:
+Here is how to use Adinch library in your project:
 
 
 1. Simple banner
