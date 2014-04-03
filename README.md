@@ -14,7 +14,7 @@ Here is how to use Adinch library in your project:
         
         AMBannerView *simpleBanner = [[AMBannerView alloc] initWithSizeType:AMBannerViewSizeType320x50];
     	simpleBanner.adsKey = MY_ADINCH_KEY;
-	simpleBanner.delegate = self;
+		simpleBanner.delegate = self;
     	[simpleBanner requestNewBanner];
     
     	[self.view addSubview:simpleBanner];
@@ -29,7 +29,7 @@ Here is how to use Adinch library in your project:
         
         AMBannerView *bigBanner = [[AMBannerView alloc] initWithSizeType:AMBannerViewSizeType300x250];
     	bigBanner.adsKey = MY_ADINCH_KEY;
-	bigBanner.delegate = self;
+		bigBanner.delegate = self;
     	[bigBanner requestNewBanner];
     
     	[self.view addSubview:bigBanner];
